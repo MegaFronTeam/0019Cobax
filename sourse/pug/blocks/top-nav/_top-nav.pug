@@ -11,7 +11,7 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-block.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -21,13 +21,19 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
+			+e.row.row
+				.col-auto.order-1.order-lg-0
+					+e.logo(href="/")
+						+img('img/svg/logo.svg')
+				.col.order-lg-0.order-last.d-none.d-lg-block
+					//- .menu-mobile.menu-mobile--js
+					//- 	.menu-mobile__inner
+					//- 		+menu-toggle()
+					+mnu()
 				.col-auto.d-lg-none
 					+menu-toggle()
+				.col-auto.order-2.order-lg-0
+					+e.tel(href="tel:+79000000000")
+						+icon('whatsapp')
+						span +7 900 000 00 00
 	// end top-nav

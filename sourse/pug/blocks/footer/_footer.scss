@@ -1,9 +1,18 @@
 .footer {
 		
 	margin-top: auto;
-// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(48)};
+	--sPB: #{rem(48)};
 	// --sTPB: #{rem()};
+	background-color: $gray-900;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(56)};
+		--sPB: #{rem(56)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(64)};
+		--sPB: #{rem(64)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);

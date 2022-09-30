@@ -3,10 +3,14 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(15px);
 		flex-wrap: wrap;
+		justify-content: center;
 	}
-
+	@include media-breakpoint-up(xxl) {
+		--bs-gutter-x: 49px;
+		// justify-content: flex-end;
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
@@ -15,11 +19,14 @@
 		
 		// margin-left: 0;
 		// margin-right: 0;
-		padding: 0;
+		// padding: 0;
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(40) rem(13) rem(39);
+		font-size: rem(14);
+		text-transform: uppercase;
+		font-weight: 700;
 	}
 }
 

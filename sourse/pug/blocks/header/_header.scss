@@ -1,7 +1,7 @@
 
-	// start .header
-	.header {
-		 
+// start .header
+.header {
+	box-shadow: 10px 10px 50px 3px rgba(210, 209, 214, 0.35);
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
