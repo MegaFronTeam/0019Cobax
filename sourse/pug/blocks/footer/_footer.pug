@@ -1,9 +1,27 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col.order-1
+					+e.soc
+						p Социальные сети
+						+soc()
+							+item-sos
+								+img('img/svg/fb.svg')
+							+item-sos
+								+img('img/svg/twitter.svg')
+							+item-sos
+								+img('img/svg/inst.svg')
+				.col-auto.order-3.order-sm-2
+					+e.tel(href="tel:+79000000000")
+						+icon('whatsapp')
+						span +7 900 000 00 00
+				.col-12.order-2.order-sm-3
+					+e.text Любое использование текстовых, фото, и&nbsp;видеоматериалов возможно только с&nbsp;согласия правообладателя группы компаний &laquo;Евро Дизайн Групп&raquo;.
+			+e.info-row.row
+				.col-sm
+					+e.caption © #[span]. ООО «Кобакс». Все права защищены.
+				.col-sm-auto 
+					+e.company(href='#')
+						+icon('design-logo')
+						| Создано в дизайн-бюро Jamesland

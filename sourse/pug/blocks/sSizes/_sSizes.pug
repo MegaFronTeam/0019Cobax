@@ -1,0 +1,25 @@
+mixin sSizes(data)
+	// start sSizes
+	+b.SECTION.sSizes.section#sSizes&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Стандартные размеры
+				.h5 Размеры композитных блоков могут быть адаптированы к&nbsp;вашим потребностям. Стандартные размеры 95, 100 и&nbsp;145&nbsp;мм.
+			+e.row.row
+				.col-auto
+					+e.item 
+						+img('img/svg/sSize-1.svg')
+						p 95х95
+				.col-auto
+					+e.item 
+						+img('img/svg/sSize-2.svg')
+						p 100х100
+				.col-auto
+					+e.item 
+						+img('img/svg/sSize-3.svg')
+						p 100х145
+				.col-auto
+					+e.item 
+						+img('img/svg/sSize-4.svg')
+						p 145х145
+	// end sSizes

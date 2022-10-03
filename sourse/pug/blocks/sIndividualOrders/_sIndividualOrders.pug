@@ -1,0 +1,21 @@
+mixin sIndividualOrders(data)
+	// start sIndividualOrders
+	+b.SECTION.sIndividualOrders.section#sIndividualOrders&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Индивидуальные заказы
+			//- +e.row.row
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide(i, title, text)
+						+e.slide.swiper-slide
+							+e.img-wrap
+								+img(`img/svg/sIndividualOrders-img-${i}.svg`)
+							h4!= title
+							p!= text
+					+slide('1', 'Индивидуальные размеры', 'Размеры блоков могут быть подобраны в соответствии с вашими потребностями')
+					+slide(2, 'Индивидуальный<br>цвет', 'Вы можете заказать блоки индивидуального цвета и покрытия')
+					+slide(3, 'Индивидуальная маркировка', 'Размеры блоков могут быть подобраны в&nbsp;соответствии с&nbsp;вашими потребностями')
+	// end sIndividualOrders
+
+//- sIndividualOrders-img-2.svg

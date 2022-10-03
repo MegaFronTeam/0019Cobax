@@ -1,0 +1,15 @@
+mixin sAdvantages(title, text, btn)
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+			if title
+				+b.section-title.text-center
+					h2!= title
+			+e.slider--js
+				.swiper-wrapper
+					block
+			if text
+				+e.text!= text 
+			if btn
+				+e.btn.btn.btn-primary(href="#")!= btn
+	// end sAdvantages

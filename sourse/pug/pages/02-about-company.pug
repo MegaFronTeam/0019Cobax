@@ -1,0 +1,52 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sSizes/_sSizes.pug
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sInterested/_sInterested.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sIndividualOrders/_sIndividualOrders.pug
+
+block variables
+	- let  mainPage= 'about-page' 
+	- let  bg= '02-about-company.jpg'
+
+block title
+	- let  title= "О компании"
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('О компании', 'Название', 'Название')
+		+sInfo('true')
+		+sAdvantages('Надёжный сервис')
+			+e.slide.swiper-slide
+				+card(5, 'Придумать заголовок<br>в&nbsp;две строки', 'Предлагает соответствующую и&nbsp;индивидуальную упаковку готовой продукции')
+			+e.slide.swiper-slide
+				+card(6, 'Придумать заголовок<br>в&nbsp;две строки', 'Обеспечиваем бесперебойную доставку в&nbsp;течение всего дня и&nbsp;365 дней в&nbsp;году')
+			+e.slide.swiper-slide
+				+card(7, 'Придумать заголовок<br>в&nbsp;две строки', 'Каждый месяц более 300 грузовиков доставляют 12&nbsp;000 м3&nbsp;готовой продукции в 30&nbsp;стран мира')
+		+sVideo
+		+sIndividualOrders
+	+footer()
+      
+
+
+

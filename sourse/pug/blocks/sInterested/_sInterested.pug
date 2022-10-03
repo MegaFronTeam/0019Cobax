@@ -1,0 +1,22 @@
+mixin sInterested(data)
+	// start sInterested
+	+b.SECTION.sInterested.section#sInterested&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h3 Вас заинтересовала наша продукция?
+			+e.row.row
+				.col-sm-6.col-lg-4
+					+e.item
+						+icon('sInterested-icon-1')
+						h5 Заказать бесплатный образец 
+							a(href='mailto:info@cobax.ru') info@cobax.ru
+				.col-sm-6.col-lg-4
+					+e.item
+						+icon('sInterested-icon-2')
+						h5 Подать заявку на встречу с представителями компании
+				.col-sm-6.col-lg-4
+					+e.item
+						+icon('sInterested-icon-3')
+						h5 Остались вопросы, звоните 
+							a(href='tel:+79000000000') +7 (900) 000-00-00
+	// end sInterested

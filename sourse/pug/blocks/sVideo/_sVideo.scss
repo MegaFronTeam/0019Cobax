@@ -1,0 +1,93 @@
+// start .sVideo
+.sVideo {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(24)};
+	// --sTPB: #{rem()};
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		z-index: -1;
+		width: 100%;
+		height: 53%;
+		top: 0;
+		left: 0;
+		background-color: $gray-400;
+	}
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(20)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(32)};
+	}
+	&__container {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(912);
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: rem(912);
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(912);
+		}
+	}
+	.section-title{
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(38.400);
+		}
+		h3 {
+			margin-bottom: rem(16);
+			font-size: rem(20);
+			@include media-breakpoint-up(md) {
+				font-size: rem(24);
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(32);
+				margin-bottom: rem(24);
+			}
+		}
+		.h5 {
+			margin-bottom: 0;
+			font-size: rem(16);
+			line-height: 1.4em;
+			@include media-breakpoint-up(md) {
+				font-size: rem(18);
+			}
+		}
+	}
+	&__video-wrap {
+		@include block(864, 488);
+		border-radius: 8px;
+		overflow: hidden;
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		& > * {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__text {
+		text-align: center;
+		line-height: 1.4em;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVideo

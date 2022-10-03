@@ -1,28 +1,38 @@
 // start .headerBlock
 .headerBlock {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()}; 
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	
-	
+	--sPT: #{rem(32)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	text-align: center;
+	background-color: $gray-400;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(64)};
+		// --sPB: #{rem(64)};
+	} 
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
 	.section-title{
-		
+		max-width: rem(584);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		h1 {
+			margin-bottom: 0;
+			line-height: 1.1em;
+		}
 	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
+	img {
+		width: 100%;
+		max-width: rem(1355);
+		@include media-breakpoint-up(lg) {
+			margin-left: 37px;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}

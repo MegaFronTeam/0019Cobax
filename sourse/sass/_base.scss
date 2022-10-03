@@ -522,3 +522,48 @@ iframe {
 .form-check{
 	cursor: pointer;
 }
+
+.btn {
+	text-transform: uppercase;
+}
+.btn-primary {
+	--bs-btn-color: #fff;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-active-color: #fff;
+	--bs-btn-disabled-color: #fff;
+}
+
+.main-page {
+	.card-item {
+		padding: rem(32) rem(32) rem(37);
+		&__wrap {
+			@include media-breakpoint-up(lg) {
+				max-width: rem(230);
+			}
+		}
+	}
+	.sAdvantages__slider {
+		margin-bottom: rem(40);
+	}
+	.sInfo {
+		background-color: $gray-400;
+		&__row {
+			&:nth-child(odd) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}
+
+.about-page {
+	.sInfo {
+		--sPT: 0;
+		--sPB: #{rem(48)};
+		@include media-breakpoint-up(md) {
+			--sPB: #{rem(40)};
+		}
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(64)};
+		}
+	}
+}

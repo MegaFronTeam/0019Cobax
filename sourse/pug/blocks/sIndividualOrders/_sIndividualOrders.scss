@@ -1,0 +1,86 @@
+// start .sIndividualOrders
+.sIndividualOrders {
+	--sPT: #{rem(24)};
+	--sPB: #{rem(48)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(20)};
+		--sPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(32)};
+		--sPB: #{rem(64)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+	&__slider {
+		max-width: max-content;
+		overflow: visible;
+		.swiper-wrapper {
+			@include media-breakpoint-down(md) {
+				flex-wrap: nowrap;
+				transform: none !important;
+				flex-direction: column;
+
+				@include roww('32px', 'm');
+				--bs-gutter-y: var(--bs-gutter-x);
+				margin-top: calc(var(--bs-gutter-y) * -1);
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+		}
+	}
+	&__slide {
+		max-width: max-content;
+		text-align: center;
+		height: auto;
+		@include media-breakpoint-down(md) {
+			margin-top: var(--bs-gutter-y);
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+		h4, p {
+			max-width: rem(294);
+		}
+		h4 {
+			margin-bottom: rem(8);
+			line-height: 1.3em;
+		}
+		p {
+			margin-bottom: 0;
+			line-height: 1.4em;
+		}
+	}
+	&__img-wrap {
+		min-height: rem(165);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sIndividualOrders

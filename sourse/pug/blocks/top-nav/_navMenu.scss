@@ -27,16 +27,39 @@
 		font-size: rem(14);
 		text-transform: uppercase;
 		font-weight: 700;
+		position: relative;
+		color: $body-color;
+		&:after {
+			@include media-breakpoint-up(lg) {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 4px;
+				left: 0;
+				bottom: 0;
+				background-color: transparent;
+			}
+		}
+		&:hover {
+			color: $primary;
+			&:after {
+				@include media-breakpoint-up(lg) {
+					background-color: $primary;
+				}
+			}
+		}
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: #{em(1)};
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
-	&.on span {
+	--position: calc(var(--h) * 3);
+	&.on span, &.on &__one-more-line {
 		--color: transparent;
 	}
 
@@ -45,10 +68,10 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
+	height: calc(var(--h)* 18);
 	position: relative; 
 	font-size: 32px;
-	width: 1em;
+	width: 24px;
 	cursor: pointer;
 	span:after,
 	span:before {
@@ -59,6 +82,7 @@
 	span {
 		@include a-cent(y);
 		display: block;
+		bottom: 4px;
 	}
 
 	span:before { 
@@ -74,13 +98,21 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: 24px;
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
 		backface-visibility: hidden; 
 		transform-origin: 50% 50%;
-	} 
+	}
+	&__one-more-line {
+		position: absolute;
+		width: 24px;
+		height: var(--h);
+		background-color: var(--color);
+		left: 0;
+		bottom: 7px;
+	}
 }
 @include media-breakpoint-down(lg) {
 
@@ -109,16 +141,16 @@
 
 		
 		.toggle-menu-mobile { 
-			margin-left: -15%;
+			// margin-left: -15%;
 			position: absolute; 
-			left: 0;
-			right: auto;
+			// left: 0;
+			right: 20px;
 			color: #FFF;
 			top: 10px;
 			z-index: 9999; 
 			span:after,
 			span:before {
-				--color: #ffffff;
+				--color: #{$body-color};
 			}
 		}
 		&__inner {

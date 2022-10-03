@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sMap/_sMap.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '05-content.jpg'
+
+block title
+	- let  title= "Контакты"
+	title= title
+block pagecontent
+	+mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		//- +topLine
+	main
+		+page-head('Контакты', 'Название', 'Название')
+		+sMap
+	+footer()
+
+block scripts
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+	script.
+		var myMap;
+		function init () {
+			myMap = new ymaps.Map('map', {
+				center: [55.76, 37.64],
+				zoom: 10
+			}, {
+				searchControlProvider: 'yandex#search'
+			});
+		}
+		ymaps.ready(init);
+
+
+
+

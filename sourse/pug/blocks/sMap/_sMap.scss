@@ -1,0 +1,63 @@
+// start .sMap
+.sMap {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(64)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(80)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(120)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(24)};
+		}
+	}
+	&__map {
+		@include block(272, 200);
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(sm) {
+			--ratio: 500/1320;
+		}
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		& > * {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.ymaps-2-1-79-map {
+			// width: 100% !important;
+			// height: 100% !important;
+		}
+	}
+	h5 {
+
+	}
+	p {
+		max-width: rem(238);
+		margin-bottom: 0;
+		&:not(:hover) {
+			color: $body-color;
+		}
+	}
+	a {
+		color: $body-color;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMap
