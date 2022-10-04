@@ -1,0 +1,18 @@
+mixin sSlider(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						.img-wrap-center
+							+img('img/sSlider-img-1.jpg')
+					+e.slide.swiper-slide
+						.img-wrap-center
+							+img('img/sSlider-img-2.jpg')
+					+e.slide.swiper-slide
+						.img-wrap-center
+							+img('img/sSlider-img-3.jpg')
+				+arrow()
+				.swiper-pagination
+	// end sSlider

@@ -267,12 +267,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -391,6 +391,36 @@ function eventHandler() {
 				spaceBetween: 48
 			}
 		}
+	});
+
+	const sSliderOrdersSwiper = new Swiper('.sSlider__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		loop: true,
+		centeredSlides: true,
+		breakpoints: {
+			992: {
+				spaceBetween: 0
+			}
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	const inputElement = document.querySelector('input[type="file"]');
+	const pond = FilePond.create(inputElement);
+	document.addEventListener('FilePond:addfile', (e) => {
+    document.querySelector('.form-wrap__content').classList.add('active');
+	});
+	document.addEventListener('FilePond:removefile', (e) => {
+    document.querySelector('.form-wrap__content').classList.remove('active');
 	});
 };
 if (document.readyState !== 'loading') {

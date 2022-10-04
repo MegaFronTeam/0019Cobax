@@ -1,12 +1,29 @@
 .form-wrap{
  	&__input-wrap{
-			// @extend .form-group;
-			
+		// @extend .form-group;
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
 		}
-		&__input{
-			// @extend .form-control;
+	}
+	&__input-title {
+		font-size: rem(12);
+		margin-bottom: rem(8);
+		color: $gray-300;
+		display: block;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(14);
+			margin-bottom: rem(12);
+		}
+	}
+	&__input{
+		// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
+		resize: none;
+		&.is-invalid {
+			background-image: none;
+			color: $danger;
+		}
  	}
  	&__btn{
  		cursor: pointer;
@@ -15,6 +32,88 @@
  		width: 100%;
  		display: block;
  	}
+	&__policy {
+		font-size: rem(14);
+		small {
+			vertical-align: bottom;
+		}
+		.form-check-input:checked[type=checkbox] {
+			background-size: 16px 16px;
+			background-position: center;
+		}
+		.custom-input {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__btn {
+		width: 100%;
+	}
+	textarea {
+		min-height: rem(101);
+		@include media-breakpoint-up(lg) {
+			min-height: rem(202);
+		}
+	}
+	&__send-question {
+		font-size: rem(14);
+		margin-bottom: rem(16);
+		.icon {
+			font-size: rem(24);
+			color: #1ac638;
+			margin-right: rem(12);
+		}
+	}
+	&__filepond-wrap {
+		position: relative;
+	}
+	&__content {
+		@include mt;
+		pointer-events: none;
+		position: absolute;
+		@include a-cent();
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(14);
+		text-align: center;
+		color: $gray-300;
+		.icon {
+			font-size: rem(24);
+			fill: none;
+			stroke: $primary;
+			stroke-width: 2px;
+			margin-bottom: rme(15);
+		}
+		&.active {
+			opacity: 0;
+		}
+	}
+	.filepond {
+		cursor: pointer;
+		height: rem(76);
+		@include media-breakpoint-up(sm) {
+			height: rem(100);
+		}
+		&--credits {
+			display: none;
+		}
+		&--panel {
+			background-color: transparent !important;
+			border: 1px dashed $gray-500 !important;
+			border-radius: 8px;
+			&-root {
+				background-color: transparent !important;
+			}
+		}
+		&--drop-label {
+			label {
+				opacity: 0;
+			}
+		}
+	}
 }
 
 

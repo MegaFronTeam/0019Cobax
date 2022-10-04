@@ -18,6 +18,7 @@ include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sInterested/_sInterested.pug
 include ../blocks/sVideo/_sVideo.pug
 include ../blocks/sIndividualOrders/_sIndividualOrders.pug
+include ../blocks/sSlider/_sSlider.pug
 
 block variables
 	- let  mainPage= 'about-page' 
@@ -45,6 +46,7 @@ block pagecontent
 				+card(7, 'Придумать заголовок<br>в&nbsp;две строки', 'Каждый месяц более 300 грузовиков доставляют 12&nbsp;000 м3&nbsp;готовой продукции в 30&nbsp;стран мира')
 		+sVideo
 		+sIndividualOrders
+		+sSlider
 	+footer()
       
 

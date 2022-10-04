@@ -1,0 +1,117 @@
+// start .sSlider
+.sSlider {
+	--sPT: #{rem(48)};
+	--sPB: #{rem(48)};
+	// --sTPB: #{rem()};
+	background-color: $gray-400;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(64)};
+		--sPB: #{rem(64)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__slider {
+		overflow: visible;
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(44.800);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(49.600);
+		}
+		.swiper-wrapper {
+			align-items: center;
+		}
+	}
+	&__slide {
+		@include block(636, 389);
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			max-width: rem(636);
+		}
+		@include media-breakpoint-down(sm) {
+			--ratio: 166/271;
+		}
+		img {
+			@include mt;
+			border-radius: 8px;
+			transform: scale(0.8);
+		}
+		&.swiper-slide-active {
+			img {
+				transform: scale(1);
+			}
+		}
+	}
+	.swiper-pagination {
+		bottom: 0;
+		&-bullet {
+			--swiper-pagination-bullet-horizontal-gap: #{rem(8)};
+			background-color: $body-color;
+			&-active, &:hover {
+				background-color: $primary;
+			}
+		}
+	}
+	.swiper-button-hand {
+		--swiperArrowPosition: #{rem(24)};
+		--swiperBorderColorDef: #fff;
+		--swiperBgDef: transparent;
+		--swiperColorDef: #fff;
+		--swiperBgDefHover: #{$body-color};
+		--swiperBorderColorDefHover: #{$body-color};
+		--swiperColorDefHover: #fff;
+		--swiperArrowSize: #{rem(32)};
+		
+		bottom: rem(40);
+		@include media-breakpoint-up(md) {
+			--swiperArrowSize: #{rem(48)};
+			--swiperArrowPosition: #{rem(30)};
+			
+			bottom: rem(44.800);
+			border-width: 3px;
+		}
+		@include media-breakpoint-up(lg) {
+			--swiperArrowSize: #{rem(64)};
+			--swiperArrowPosition: #{rem(0)};
+
+			bottom: rem(49.600);
+		}
+		@include media-breakpoint-up(xl) {
+			--swiperArrowPosition: #{rem(80)};
+		}
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			font-size: rem(16);
+			stroke-width: 3px;
+			stroke-linecap: round;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(25);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSlider
