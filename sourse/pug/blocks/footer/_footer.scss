@@ -48,6 +48,20 @@
 			font-size: rem(14);
 			margin-right: rem(12);
 		}
+		a {
+			svg {
+				*[fill="#E6E5EA"] {
+					@include mt;
+				}
+			}
+			&:hover {
+				svg {
+					*[fill="#E6E5EA"] {
+						fill: currentColor !important;
+					}
+				}
+			}
+		}
 	}
 	&__tel {
 		display: flex;

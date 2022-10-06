@@ -394,13 +394,22 @@ function eventHandler() {
 	});
 
 	const sSliderOrdersSwiper = new Swiper('.sSlider__slider--js', {
+		effect: "coverflow",
 		slidesPerView: 'auto',
 		spaceBetween: 0,
 		loop: true,
 		centeredSlides: true,
+		coverflowEffect: {
+			rotate: 0,
+			stretch: 0,
+			depth: 0,
+			modifier: 1,
+			slideShadows: false,
+			scale: 0.8,
+		},
 		breakpoints: {
 			992: {
-				spaceBetween: 0
+				spaceBetween: 0,
 			}
 		},
 		pagination: {
@@ -422,6 +431,29 @@ function eventHandler() {
 	document.addEventListener('FilePond:removefile', (e) => {
     document.querySelector('.form-wrap__content').classList.remove('active');
 	});
+
+	const convertImages = (query, callback) => {
+		const images = document.querySelectorAll(query);
+
+		images.forEach(image => {
+			fetch(image.src)
+				.then(res => res.text())
+				.then(data => {
+					const parser = new DOMParser();
+					const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+					if (image.id) svg.id = image.id;
+					if (image.className) svg.classList = image.classList;
+
+					image.parentNode.replaceChild(svg, image);
+				})
+				.then(callback)
+				.catch(error => console.error(error))
+		});
+	};
+
+	convertImages('.img-svg');
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -2,6 +2,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-down(lg) {
+		padding-top: rem(13);
+		padding-bottom: rem(13);
+	}
 	&__row{
 		--bs-gutter-x: #{rem(16)};
 		// --bs-gutter-y: var(--bs-gutter-x);
@@ -61,7 +65,9 @@
 			flex: 0 0 auto;
 			font-size: rem(24);
 			color: #1AC638;
-			margin-right: rem(12);
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(12);
+			}
 		}
 		span {
 			display: none;

@@ -30,7 +30,7 @@ mixin modal()
 				+input("", 'text', 'Представьтесь*')(required)
 				+input("", 'tel', 'Контактный номер*')(required)
 				+input("", 'textarea', 'Дополнительная информация')
-				+e.send-question
+				+e.send-question(href="#")
 					+icon('whatsapp')
 					| Задать вопрос в WhatsApp
 				+policy()

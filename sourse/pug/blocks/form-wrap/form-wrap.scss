@@ -57,8 +57,13 @@
 		}
 	}
 	&__send-question {
+		display: block;
 		font-size: rem(14);
 		margin-bottom: rem(16);
+		margin-top: rem(24);
+		&:not(:hover) {
+			color: $body-color;
+		}
 		.icon {
 			font-size: rem(24);
 			color: #1ac638;
