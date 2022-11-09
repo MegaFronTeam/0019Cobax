@@ -39,30 +39,35 @@
 
 .addBlock{
 	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
+	// border: 1px solid;
+	border-radius: 8px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
 	input{
-		color: inherit;
+		color: #1C1C1E;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: rem(34);
+		width: 94px;
+		margin: 0 8px;
+		border: 1px solid #AEADB2;
+		border-radius: 8px;
 	}
 	&__btn{
-		color: inherit;
-		height: rem(45);
+		color: #AEADB2;
+		height: rem(34);
 		position: relative;
-		border-radius: 23px;
+		border-radius: 8px;
 		background: none !important;
-		border: none !important;
+		// border: none !important;
 		box-shadow: none !important;
 		outline: none !important;
 		background: transparent;
+		border: 1px solid #AEADB2;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		width: rem(34);
 		&::before,
 		&::after{
 			content: '';
@@ -181,5 +186,28 @@
 		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(16);
 		}
+	}
+}
+
+.order {
+	@include mt;
+	position: fixed;
+	top: 50%;
+	right: 79px;
+	transform: translateY(-50%);
+	padding: rem(28);
+	background-color: $primary;
+	color: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1003;
+	@media (max-width: 1280px) {
+		display: none;
+	}
+	&:hover {
+		box-shadow: -1px 1px 20px 6px #ff69004a;
+	}
+	.icon {
+		font-size: rem(64);
 	}
 }

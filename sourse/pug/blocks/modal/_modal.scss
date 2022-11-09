@@ -39,6 +39,72 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+	.form-wrap {
+		.h5 {
+			margin-bottom: 0;
+			padding-bottom: rem(21);
+			&.title {
+				padding-bottom: rem(14.400);
+			}
+		}
+		&__wrap {
+			--bs-gutter-y: #{rem(26)};
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
+		}
+		&__addblock-wrap {
+			--bs-gutter-y: #{rem(16)};
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
+		}
+		&__row {
+			margin-bottom: rem(32);
+		}
+	}
+	&--order {
+		.form-wrap {
+			&__policy {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+	&--thx {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: rem(739);
+		.modal-win {
+			&__icon-wrap {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				background-color: $primary;
+				color: #fff;
+				margin-bottom: rem(24);
+				margin-left: auto;
+				margin-right: auto;
+				.icon {
+					font-size: rem(24);
+				}
+			}
+		}
+		.h4 {
+			text-align: center;
+			margin-bottom: 0;
+		}
+	}
+}
+
+#modal-order, #modal-thx {
+	align-self: flex-end;
 }
 
 .carousel__button.is-close {

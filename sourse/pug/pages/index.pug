@@ -16,6 +16,7 @@ include ../blocks/sSizes/_sSizes.pug
 include ../blocks/sInfo/_sInfo.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sInterested/_sInterested.pug
+include ../blocks/sReview/_sReview.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -33,7 +34,7 @@ block pagecontent
 		//- +topLine
 	main
 		+headerBlock 
-		+sAdvantages('', 'Скачать последнюю версию независимого ежеквартального контрольного теста Института древесных технологий в&nbsp;соответствии с&nbsp;требованиями EPAL', 'Сертификат испытаний')
+		+sAdvantages('', 'Скачать последнюю версию независимого ежеквартального контрольного теста', 'Сертификат испытаний')
 			+e.slide.swiper-slide
 				+card(1, 'Более устойчивы к&nbsp;деформации', 'После контакта с&nbsp;водой среднее разбухание достигает&nbsp;2% по&nbsp;ширине и&nbsp;4% по&nbsp;высоте')
 			+e.slide.swiper-slide
@@ -44,11 +45,11 @@ block pagecontent
 				+card(4, 'Соответствует стандартам IPPC', 'Блоки соответствуют международным фитосанитарным<br>стандартам')
 		+sSizes
 		+sInfo
-		+sPartners
+		+sReview
+		//- +sPartners
 		+sInterested
-		
 	+footer()
-      
+	+order()
 
 
 

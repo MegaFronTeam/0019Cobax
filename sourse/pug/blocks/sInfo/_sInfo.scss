@@ -2,14 +2,15 @@
 .sInfo {
 	--sPT: #{rem(48)};
 	--sPB: #{rem(24)};
-	// --sTPB: #{rem()};
+	// --sTPB: #{rem(24)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(40)};
 		--sPB: #{rem(20)};
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(64)};
-		--sPB: #{rem(32)};
+		// --sPB: #{rem(32)};
+		--sPB: 4.2rem;
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};

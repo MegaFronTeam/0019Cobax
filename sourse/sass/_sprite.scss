@@ -7,6 +7,14 @@
 	fill: currentColor;
 }
 
+.icon-arrow-left {
+	font-size:math.div(64,10)*1rem;
+	width: math.div(64,64)*1em;
+}
+.icon-arrow-right {
+	font-size:math.div(64,10)*1rem;
+	width: math.div(64,64)*1em;
+}
 .icon-basket {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(22,24)*1em;
@@ -27,6 +35,10 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(21,24)*1em;
 }
+.icon-done {
+	font-size:math.div(19,10)*1rem;
+	width: math.div(26,19)*1em;
+}
 .icon-fb {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
@@ -34,6 +46,10 @@
 .icon-instagram {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
+}
+.icon-order {
+	font-size:math.div(64,10)*1rem;
+	width: math.div(64,64)*1em;
 }
 .icon-sInterested-icon-1 {
 	font-size:math.div(80,10)*1rem;

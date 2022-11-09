@@ -121,6 +121,12 @@
 	}
 }
 
+.custom-input {
+	margin-bottom: 0;
+	&__input {
+		background-size: 16px;
+	}
+}
 
 .parsley-error{
 	border-image: none;

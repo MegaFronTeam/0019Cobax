@@ -36,5 +36,40 @@ mixin modal()
 				+policy()
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) отправить
 	// #modal-question
+
+	div(id="modal-order"  style="display: none" )
+		+b.modal-win--order
+			+form-wrap
+				.text-center
+					+e.title.form-data.h3 Заказать образцы
+
+				+input("", 'text', 'Представьтесь*')(required)
+				+input("", 'tel', 'Контактный номер*')(required)
+
+				+e.row.row
+					.col
+						.h5 Размер
+						+e.wrap
+							+in-c("checkbox", '95х95 мм')
+							+in-c("checkbox", '100х100 мм')
+							+in-c("checkbox", '100х145 мм')
+							+in-c("checkbox", '145х145 мм')
+					.col
+						.h5.title Количество
+						+e.addblock-wrap
+							+addblock
+							+addblock
+							+addblock
+							+addblock
+				+policy()
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) отправить
+	// #modal-question
+
+	div(id="modal-thx"  style="display: none" )
+		+b.modal-win--thx
+			+e.icon-wrap
+				+icon('done')
+			.h4 Сообщение отправлено
+	// #modal-thx
 	
 	// end modals

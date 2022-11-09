@@ -454,6 +454,19 @@ function eventHandler() {
 
 	convertImages('.img-svg');
 	
+	const sReviewSwiper = new Swiper('.sReview__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

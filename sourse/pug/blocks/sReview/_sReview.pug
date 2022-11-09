@@ -1,0 +1,26 @@
+mixin sReview(data)
+	// start sReview
+	+b.SECTION.sReview.section#sReview&attributes(attributes)
+		.container
+			+e.arrow-wrap
+				+b.section-title
+					h2 Отзывы
+					+arrow
+				+e.slider--js.swiper
+					.swiper-wrapper
+						-for(let i = 0; i < 5; i++)
+							+e.slide.swiper-slide
+								+e.slide-row.row
+									.col-lg-auto
+										+e.wrap
+											+img('img/logo-1.jpg')
+											+e.content.d-block.d-lg-none
+												.h4 Имя Фамилия
+												+e.status директор производства
+									.col-lg
+										.h4.d-none.d-lg-block Имя Фамилия
+										+e.status.d-none.d-lg-block директор производства
+										p На&nbsp;заводе ежедневно работают 100&nbsp;сотрудников, которые отвечают за&nbsp;эффективную работу. За&nbsp;девять лет работы COBAX стал одним из&nbsp;самых передовых заводов.
+										+e.date 00 месяц 2022
+					.swiper-pagination
+	// end sReview
