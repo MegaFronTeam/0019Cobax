@@ -65,6 +65,9 @@
 			flex: 0 0 auto;
 			font-size: rem(24);
 			color: #1AC638;
+			@include media-breakpoint-up(md) {
+				font-size: rem(32);
+			}
 			@include media-breakpoint-up(lg) {
 				margin-right: rem(12);
 			}
