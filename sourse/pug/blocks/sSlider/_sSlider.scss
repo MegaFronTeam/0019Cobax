@@ -71,13 +71,12 @@
 	}
 	.swiper-button-hand {
 		--swiperArrowPosition: #{rem(24)};
-		--swiperBorderColorDef: #fff;
-		--swiperBgDef: transparent;
+		--swiperArrowSize: 32px;
 		--swiperColorDef: #fff;
-		--swiperBgDefHover: #{$body-color};
-		--swiperBorderColorDefHover: #{$body-color};
-		--swiperColorDefHover: #fff;
-		--swiperArrowSize: #{rem(32)};
+		--swiperBgDef: transparent;
+		--swiperBgDefHover: transparent;
+		border: none;
+		box-shadow: none;
 		
 		bottom: rem(40);
 		@include media-breakpoint-up(md) {
@@ -99,11 +98,13 @@
 		.icon {
 			fill: none;
 			stroke: currentColor;
-			font-size: rem(16);
 			stroke-width: 3px;
-			stroke-linecap: round;
+			font-size: 32px;
+			@include media-breakpoint-up(md) {
+				font-size: 40px;
+			}
 			@include media-breakpoint-up(lg) {
-				font-size: rem(25);
+				font-size: 64px;
 			}
 		}
 	}

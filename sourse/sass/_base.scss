@@ -565,5 +565,8 @@ iframe {
 		@include media-breakpoint-up(lg) {
 			--sPB: #{rem(64)};
 		}
+		p, h5 {
+			margin-bottom: rem(16);
+		}
 	}
 }
