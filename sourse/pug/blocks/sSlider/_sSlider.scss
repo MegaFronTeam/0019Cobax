@@ -42,7 +42,11 @@
 	&__slide {
 		@include block(636, 389);
 		width: 100%;
-		@include media-breakpoint-up(md) {
+		max-width: rem(327);
+		// @include media-breakpoint-up(md) {
+		// 	max-width: rem(636);
+		// }
+		@include media-breakpoint-up(lg) {
 			max-width: rem(636);
 		}
 		@include media-breakpoint-down(sm) {
@@ -79,9 +83,9 @@
 		box-shadow: none;
 		
 		bottom: rem(40);
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(sm) {
 			--swiperArrowSize: #{rem(48)};
-			--swiperArrowPosition: #{rem(30)};
+			--swiperArrowPosition: #{rem(-5.734)};
 			
 			bottom: rem(44.800);
 			border-width: 3px;
@@ -100,7 +104,7 @@
 			stroke: currentColor;
 			stroke-width: 3px;
 			font-size: 32px;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(sm) {
 				font-size: 40px;
 			}
 			@include media-breakpoint-up(lg) {

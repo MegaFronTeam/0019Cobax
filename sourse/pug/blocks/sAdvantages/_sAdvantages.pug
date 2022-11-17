@@ -1,7 +1,7 @@
 mixin sAdvantages(title, text, btn)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
-		.container
+		+e.container.container
 			if title
 				+b.section-title.text-center
 					h2!= title

@@ -14,7 +14,7 @@
 		--sPB: #{rem(64)};
 	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
+		--bs-gutter-x: #{rem(24)};
 		--bs-gutter-y: #{rem(24)};
 		justify-content: center;
 		max-width: rem(1125);

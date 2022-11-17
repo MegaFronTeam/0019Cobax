@@ -535,15 +535,19 @@ iframe {
 
 .main-page {
 	.card-item {
-		padding: rem(32) rem(32) rem(37);
-		&__wrap {
-			@include media-breakpoint-up(lg) {
-				max-width: rem(230);
-			}
-		}
+		// padding: rem(32) rem(32) rem(37);
+		// &__wrap {
+		// 	@include media-breakpoint-up(lg) {
+		// 		max-width: rem(230);
+		// 	}
+		// }
 	}
 	.sAdvantages__slider {
-		margin-bottom: rem(40);
+		margin-top: rem(40);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+			margin-top: 0;
+		}
 	}
 	.sInfo {
 		background-color: $gray-400;

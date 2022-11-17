@@ -16,6 +16,7 @@
 		--bs-gutter-y: #{rem(24)};
 		justify-content: center;
 		align-items: flex-end;
+		text-align: center;
 	}
 	.section-title{
 		max-width: rem(732);
@@ -41,6 +42,7 @@
 	}
 	&__item{
 		img {
+			max-width: 100%;
 			margin-bottom: rem(18);
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(21.600);

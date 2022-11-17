@@ -127,11 +127,14 @@
 }
 
 .card-item {
-	padding: rem(24) rem(32) rem(37);
+	padding: rem(24) rem(20.800) rem(24);
 	box-shadow: 10px 10px 50px 3px rgba(210, 209, 214, 0.35);
 	border-radius: 8px;
 	background-color: #fff;
 	height: 100%;
+	@include media-breakpoint-up(lg) {
+		padding: rem(24) rem(32) rem(37);
+	}
 	&__img-wrap {
 		width: rem(120);
 		height: rem(90);
@@ -160,6 +163,9 @@
 	}
 	h4 {
 		margin-bottom: rem(8);
+		@include media-breakpoint-down(lg) {
+			font-size: rem(20);
+		}
 		@include media-breakpoint-down(sm) {
 			font-size: rem(18);
 		}
@@ -167,6 +173,9 @@
 	p {
 		line-height: 1.4em;
 		margin-bottom: 0;
+		@include media-breakpoint-down(lg) {
+			font-size: rem(16);
+		}
 	}
 }
 
@@ -195,7 +204,7 @@
 	top: 50%;
 	right: 79px;
 	transform: translateY(-50%);
-	padding: rem(28);
+	padding: rem(14);
 	background-color: $primary;
 	color: #fff;
 	border-radius: 50%;
@@ -208,6 +217,6 @@
 		box-shadow: -1px 1px 20px 6px #ff69004a;
 	}
 	.icon {
-		font-size: rem(64);
+		font-size: rem(32);
 	}
 }
