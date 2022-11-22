@@ -2,7 +2,7 @@
 .sAdvantages {
 	--sPT: #{rem(48)};
 	--sPB: #{rem(48)};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(40)};
 	background-color: $gray-400;
 	text-align: center;
 	@include media-breakpoint-up(md) {
@@ -18,6 +18,11 @@
     flex-direction: column;
     align-items: center;
 	}
+	.section-title {
+		h2 {
+			margin-bottom: 0;
+		}
+	}
 	&__row{
 		// --bs-gutter-x: #{rem(48)};
 		// --bs-gutter-y: #{rem()};
@@ -32,8 +37,9 @@
 	&__slide {
 		height: auto;
 		max-width: rem(235);
-		@include media-breakpoint-up(lg) {
-			max-width: max-content;
+		@include media-breakpoint-up(xl) {
+			max-width: none;
+			width: calc(100% / 4 - 48px);
 		}
 	}
 	&__text {

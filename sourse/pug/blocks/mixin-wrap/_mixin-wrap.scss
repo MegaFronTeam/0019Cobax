@@ -132,7 +132,7 @@
 	border-radius: 8px;
 	background-color: #fff;
 	height: 100%;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		padding: rem(24) rem(32) rem(37);
 	}
 	&__img-wrap {

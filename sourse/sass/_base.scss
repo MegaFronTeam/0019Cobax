@@ -573,4 +573,11 @@ iframe {
 			margin-bottom: rem(16);
 		}
 	}
+	.sAdvantages__slide {
+		max-width: rem(224);
+		@include media-breakpoint-up(lg) {
+			max-width: none;
+			width: calc(100% / 3 - 48px);
+		}
+	}
 }

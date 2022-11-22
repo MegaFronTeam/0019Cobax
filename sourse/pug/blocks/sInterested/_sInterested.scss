@@ -29,8 +29,13 @@
 	}
 	&__item{
 		text-align: center;
+		@include media-breakpoint-down(sm) {
+			max-width: rem(272);
+			margin-left: auto;
+			margin-right: auto;
+		} 
 		.icon {
-			font-size: rem(45);
+			font-size: 60px;
 			margin-bottom: rem(12);
 			@include media-breakpoint-up(sm) {
 				font-size: rem(60);
@@ -42,12 +47,9 @@
 		}
 		h5 {
 			line-height: 1.4em;
-			font-size: rem(12);
+			font-size: 16px;
 			margin-bottom: 0;
 			@include media-breakpoint-up(sm) {
-				font-size: rem(15);
-			}
-			@include media-breakpoint-up(xl) {
 				font-size: rem(18);
 			}
 		}
