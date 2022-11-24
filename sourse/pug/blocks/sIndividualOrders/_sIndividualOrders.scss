@@ -49,6 +49,9 @@
 		max-width: max-content;
 		text-align: center;
 		height: auto;
+		@include media-breakpoint-up(lg) {
+			max-width: calc(100% / 3 - 48px);
+		}
 		@include media-breakpoint-down(md) {
 			margin-top: var(--bs-gutter-y);
 			margin-left: 0 !important;

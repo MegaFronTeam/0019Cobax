@@ -20,10 +20,11 @@
 		@include block(272, 200);
 		margin-bottom: rem(24);
 		@include media-breakpoint-up(sm) {
-			--ratio: 500/1320;
+			--ratio: 806/1320;
 		}
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(32);
+			--ratio: 500/1320;
 		}
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
