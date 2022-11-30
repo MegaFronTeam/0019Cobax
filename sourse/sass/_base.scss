@@ -552,7 +552,7 @@ iframe {
 	.sInfo {
 		background-color: $gray-400;
 		&__row {
-			align-items: flex-start;
+			// align-items: flex-start;
 			&:nth-child(odd) {
 				flex-direction: row-reverse;
 			}

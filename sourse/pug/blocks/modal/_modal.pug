@@ -47,14 +47,14 @@ mixin modal()
 				+input("", 'tel', 'Контактный номер*')(required)
 
 				+e.row.row
-					.col
+					.col-auto.col-sm
 						.h5 Размер
 						+e.wrap
 							+in-c("checkbox", '95х95 мм')
 							+in-c("checkbox", '100х100 мм')
 							+in-c("checkbox", '100х145 мм')
 							+in-c("checkbox", '145х145 мм')
-					.col
+					.col-auto.col-sm
 						.h5.title Количество
 						+e.addblock-wrap
 							+addblock

@@ -40,7 +40,7 @@
 .addBlock{
 	color: var(--color, #{$primary});
 	// border: 1px solid;
-	border-radius: 8px;
+	border-radius: 4px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
@@ -48,17 +48,22 @@
 		color: #1C1C1E;
 		text-align: center;
 		border: none;
-		height: rem(34);
-		width: 94px;
+		height: rem(24);
+		width: 60px;
 		margin: 0 8px;
 		border: 1px solid #AEADB2;
-		border-radius: 8px;
+		border-radius: 4px;
+		@include media-breakpoint-up(md) {
+			width: 94px;
+			height: rem(32);
+		}
 	}
 	&__btn{
+		@include mt;
 		color: #AEADB2;
-		height: rem(34);
+		height: rem(24);
 		position: relative;
-		border-radius: 8px;
+		border-radius: 4px;
 		background: none !important;
 		// border: none !important;
 		box-shadow: none !important;
@@ -67,7 +72,11 @@
 		border: 1px solid #AEADB2;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(34);
+		width: rem(24);
+		@include media-breakpoint-up(md) {
+			height: rem(32);
+			width: rem(32);
+		}
 		&::before,
 		&::after{
 			content: '';
@@ -79,6 +88,10 @@
 		}
 		&--plus::after{
 			transform: rotate(90deg);
+		}
+		&:hover {
+			color: $primary;
+			border-color: $primary;
 		}
 	}
 }
