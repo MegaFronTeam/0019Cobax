@@ -215,7 +215,7 @@
 	@include mt;
 	position: fixed;
 	top: 50%;
-	right: 79px;
+	right: 35px;
 	transform: translateY(-50%);
 	padding: rem(14);
 	background-color: $primary;
@@ -223,8 +223,11 @@
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 1003;
-	@media (max-width: 1280px) {
-		display: none;
+	// @media (max-width: 1280px) {
+	// 	display: none;
+	// }
+	@include media-breakpoint-up(md) {
+		right: 79px;
 	}
 	&:hover {
 		box-shadow: -1px 1px 20px 6px #ff69004a;
