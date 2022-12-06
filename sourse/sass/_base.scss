@@ -101,13 +101,14 @@ body {
 .main-wrapper { 
 	position: relative;
 	width: 100%;
-	overflow: hidden;
-	// display: flex;
-	// flex-direction: row; 
-// /	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column; 
+	// /	overflow: scroll;
 	// width: 100%; 
 	// height: 100vh;
-	// height: calc(var(--vh, 1vh) * 100);
+	height: calc(var(--vh, 1vh) * 100);
 	
 	
 }
